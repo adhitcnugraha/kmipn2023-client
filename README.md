@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# kmipn-2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+for documentation only
+
+# Hello, I am Adhitia
+
+Welcome to my Github Repository (Client)
 
 ## Available Scripts
 
