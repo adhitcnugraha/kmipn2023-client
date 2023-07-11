@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -8,9 +9,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <p className="text-white-color font-poppins font-semibold mr-20 ">
-                MarketDUS
-              </p>
+              <img
+                alt="logo"
+                src={Logo}
+                style={{
+                  maxWidth: 240,
+                  maxHeight: 200,
+                  marginRight: 20,
+                }}
+              />
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
