@@ -41,7 +41,7 @@ const Navbar = () => {
                   >
                     Contact
                   </Link>
-                  <Link to="/client/login">Login</Link>
+                  <Link to="/client/login">Logout</Link>
                 </div>
               </div>
             </div>

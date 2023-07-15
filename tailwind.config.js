@@ -9,6 +9,8 @@ module.exports = {
       colors: {
         "custom-green": "rgba(35, 125, 27, 0.84)",
         "white-color": "#FFFFFF",
+        "custom-two": "#50A088",
+        "cus-grey": "#D9D9D9",
       },
     },
   },
