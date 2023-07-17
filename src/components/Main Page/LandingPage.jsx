@@ -13,7 +13,7 @@ const LandingPage = () => {
           <div className="flex lg:flex-1">
             <Link to="#" className="-m-1.5 p-1.5">
               <span className="sr-only">MarketDUS</span>
-              <img className="h-16 w-auto" src={LogoLandingPage} alt="" />
+              <img className="h-32 w-auto" src={LogoLandingPage} alt="" />
             </Link>
           </div>
           <div className="flex lg:hidden">
