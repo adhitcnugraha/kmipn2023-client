@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import LogoLandingPage from "../../assets/logolandingpage.png"
+import LogoLandingPage from "../../assets/logolandingpage.PNG";
 
 const LandingPage = () => {
   return (
@@ -13,11 +13,7 @@ const LandingPage = () => {
           <div className="flex lg:flex-1">
             <Link to="#" className="-m-1.5 p-1.5">
               <span className="sr-only">MarketDUS</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <img className="h-16 w-auto" src={LogoLandingPage} alt="" />
             </Link>
           </div>
           <div className="flex lg:hidden">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logolandingpage.PNG";
 
 const Navbar = () => {
   return (
@@ -13,8 +13,8 @@ const Navbar = () => {
                 alt="logo"
                 src={Logo}
                 style={{
-                  maxWidth: 240,
-                  maxHeight: 200,
+                  maxWidth: 100,
+                  maxHeight: 100,
                   marginRight: 20,
                 }}
               />
@@ -30,7 +30,6 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/client/shop"
-                    href="#"
                     className="text-white-color font-poppins font-semibold mr-10"
                   >
                     Shop

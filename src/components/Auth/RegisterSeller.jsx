@@ -20,7 +20,7 @@ const theme = createTheme({
   },
 });
 
-const LoginUser = () => {
+const RegisterSeller = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -37,9 +37,33 @@ const LoginUser = () => {
         MarketDUS
       </h1>
       <h1 className="text-black font-semibold text-4xl mb-10" theme={theme}>
-        Login
+        Seller Register
       </h1>
       <div className="flex flex-col items-center justify-center space-y-6">
+        {/* Username */}
+        <FormControl
+          className="m-1 w-96 h-14 mt-8 font-poppins"
+          variant="outlined"
+        >
+          <InputLabel
+            htmlFor="outlined-adornment-username"
+            className="text-black opacity-70 "
+          >
+            Username
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-email"
+            label="Email"
+            style={{ borderRadius: 25 }}
+            endAdornment={
+              <InputAdornment
+                position="end"
+                className="text-black font-poppins"
+              />
+            }
+            className="rounded-3xl text-black"
+          />
+        </FormControl>
         {/* Email */}
         <FormControl className="m-1 w-96 h-14" variant="outlined">
           <InputLabel
@@ -71,7 +95,7 @@ const LoginUser = () => {
             id="outlined-adornment-password"
             type={showPassword ? "text" : "password"}
             label="Password"
-            style={{ borderRadius: 25, marginBottom: 10 }}
+            style={{ borderRadius: 25 }}
             endAdornment={
               <InputAdornment position="end" className="text-black">
                 <IconButton
@@ -90,9 +114,9 @@ const LoginUser = () => {
         <div className="flex flex-col items-center justify-center mt-6">
           <Button
             component={Link}
-            to="/client/dashboard"
+            to="/client/seller/login"
             variant="contained"
-            className=" text-white py-2 px-4 w-52 "
+            className=" text-white text-2xl rounded-3xl py-2 px-4 w-52 "
             style={{
               background: "#50A088",
               textTransform: "capitalize",
@@ -107,7 +131,7 @@ const LoginUser = () => {
             <Button
               className="mt-16 text-xl text-custom-blue font-poppins"
               component={Link}
-              to="/client/register"
+              to="/client/seller/login"
               style={{
                 textTransform: "capitalize",
                 fontWeight: "bold",
@@ -115,23 +139,7 @@ const LoginUser = () => {
               }}
               theme={theme}
             >
-              Don’t have an account? Register here
-            </Button>
-          </Typography>
-          <Typography>
-            <Button
-              className="font-bold text-xl opacity-80 underline"
-              style={{
-                color: "#E81616",
-                textTransform: "capitalize",
-                textDecorationLine: "underline",
-                fontWeight: "bold",
-                fontSize: 18,
-              }}
-              component={Link}
-              to="/client/seller/register"
-            >
-              Be a part of seller
+              Have an account? Sign In
             </Button>
           </Typography>
         </div>
@@ -140,4 +148,4 @@ const LoginUser = () => {
   );
 };
 
-export default LoginUser;
+export default RegisterSeller;
