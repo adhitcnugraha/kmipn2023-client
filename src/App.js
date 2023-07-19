@@ -5,7 +5,8 @@ import LoginUser from "./components/Auth/LoginUser";
 import RegisterUser from "./components/Auth/RegisterUser";
 import LandingPage from "./components/Main Page/LandingPage";
 import RegisterSeller from "./components/Auth/RegisterSeller";
-import SellerForm from "./components/Form/SellerForm";
+import SellerFormStep from "./components/Form/SellerFormStep";
+import SellerFormStepTwo from "./components/Form/SellerFormStepTwo";
 import LoginSeller from "./components/Auth/LoginSeller";
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         <Route path="/client/register" element={<RegisterUser />} />
         <Route path="/client/seller/register" element={<RegisterSeller />} />
         <Route path="/client/seller/login" element={<LoginSeller />} />
-        <Route path="/client/seller/form" element={<SellerForm />} />
+        <Route path="/client/seller/form/1" element={<SellerFormStep />} />
+        <Route path="/client/seller/form/2" element={<SellerFormStepTwo />} />
       </Routes>
     </BrowserRouter>
   );

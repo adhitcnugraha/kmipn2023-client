@@ -90,7 +90,7 @@ const LoginSeller = () => {
         <div className="flex flex-col items-center justify-center mt-6">
           <Button
             component={Link}
-            to="/client/seller/form"
+            to="/client/seller/form/1"
             variant="contained"
             className=" text-white text-2xl rounded-3xl py-2 px-4 w-52 "
             style={{
