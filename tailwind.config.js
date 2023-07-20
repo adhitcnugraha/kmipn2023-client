@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      width: {
+        500: "500px",
+      },
       colors: {
         "custom-green": "rgba(35, 125, 27, 0.84)",
         "green-primary": "#237D1B",

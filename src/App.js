@@ -5,9 +5,10 @@ import LoginUser from "./components/Auth/LoginUser";
 import RegisterUser from "./components/Auth/RegisterUser";
 import LandingPage from "./components/Main Page/LandingPage";
 import RegisterSeller from "./components/Auth/RegisterSeller";
-import SellerFormStep from "./components/Form/SellerFormStep";
-import SellerFormStepTwo from "./components/Form/SellerFormStepTwo";
 import LoginSeller from "./components/Auth/LoginSeller";
+import SellerFormStep from "./components/Form/Seller Forms/SellerFormStep";
+import SellerFormStepTwo from "./components/Form/Seller Forms/SellerFormStepTwo";
+import SellerFormStepThree from "./components/Form/Seller Forms/SellerFormStepThree";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/client/seller/login" element={<LoginSeller />} />
         <Route path="/client/seller/form/1" element={<SellerFormStep />} />
         <Route path="/client/seller/form/2" element={<SellerFormStepTwo />} />
+        <Route path="/client/seller/form/3" element={<SellerFormStepThree />} />
       </Routes>
     </BrowserRouter>
   );
