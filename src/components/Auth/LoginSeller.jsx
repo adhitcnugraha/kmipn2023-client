@@ -115,7 +115,7 @@ const LoginSeller = () => {
               }}
               theme={theme}
             >
-              Have an account? Sign In
+              Don’t have an account? Register here
             </Button>
           </Typography>
         </div>

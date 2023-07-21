@@ -9,6 +9,10 @@ import LoginSeller from "./components/Auth/LoginSeller";
 import SellerFormStep from "./components/Form/Seller Forms/SellerFormStep";
 import SellerFormStepTwo from "./components/Form/Seller Forms/SellerFormStepTwo";
 import SellerFormStepThree from "./components/Form/Seller Forms/SellerFormStepThree";
+import MainContent from "./components/Form/Product Forms/MainContent";
+import MainContentTwo from "./components/Form/Product Forms/MainContentTwo";
+import MainContentThree from "./components/Form/Product Forms/MainContentThree";
+import MainContentFour from "./components/Form/Product Forms/MainContentFour";
 
 function App() {
   return (
@@ -23,6 +27,19 @@ function App() {
         <Route path="/client/seller/form/1" element={<SellerFormStep />} />
         <Route path="/client/seller/form/2" element={<SellerFormStepTwo />} />
         <Route path="/client/seller/form/3" element={<SellerFormStepThree />} />
+        <Route path="/client/seller/addproduct/1" element={<MainContent />} />
+        <Route
+          path="/client/seller/addproduct/2"
+          element={<MainContentTwo />}
+        />
+        <Route
+          path="/client/seller/addproduct/3"
+          element={<MainContentThree />}
+        />
+        <Route
+          path="/client/seller/addproduct/4"
+          element={<MainContentFour />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -9,6 +9,7 @@
     "@fontsource/poppins": "^5.0.5",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.0.6",
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.13.7",
     "@mui/styled-engine": "^5.13.2",
@@ -21,6 +22,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.3.2",
     "web-vitals": "^2.1.0"
