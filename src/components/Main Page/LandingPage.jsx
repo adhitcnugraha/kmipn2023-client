@@ -130,7 +130,7 @@ const LandingPage = () => {
               MarketDUS
             </h1>
             <p className="mt-6 font-poppins font-bold text-lg leading-8 text-gray-600">
-              Dari SAMPAH jadi RUPIAH
+              From SAMPAH to RUPIAH
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
@@ -143,6 +143,242 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-poppins font-bold text-gray-800 mb-16 mt-3 text-center">
+            Why Choose MarketDUS?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-md">
+              <img
+                className="w-full h-64 object-cover rounded-lg"
+                src="https://cdn.idntimes.com/content-images/community/2020/03/daurulang-9fe8c6f667e535a05bf9d945cf90a410_600x400.jpg"
+                alt="Benefits"
+              />
+            </div>
+            <div className="max-w-md">
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800 font-poppins">
+                    Recycle and contribute to a greener planet.
+                  </p>
+                </li>
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800 font-poppins">
+                    Find unique and creative items from recycled materials.
+                  </p>
+                </li>
+                {/* Add more benefits here */}
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800 font-poppins">
+                    As a place for the promotion of recyclable waste.
+                  </p>
+                </li>
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800 font-poppins">
+                    Be able to increase the local economy.
+                  </p>
+                </li>
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800 font-poppins">
+                    Raise awareness in protecting our earth environment.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      {/* <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
+            How It Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-md">
+              <img
+                className="w-full h-64 object-cover rounded-lg"
+                src="https://example.com/how-it-works-image.jpg"
+                alt="How It Works"
+              />
+            </div>
+            <div className="max-w-md">
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800">
+                    Sellers list their recycled items on MarketDUS.
+                  </p>
+                </li>
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800">
+                    Buyers browse and purchase the items they like.
+                  </p>
+                </li>
+                <li className="flex items-start space-x-4">
+                  <svg
+                    className="flex-shrink-0 h-6 w-6 text-custom-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-gray-800">
+                    MarketDUS facilitates the transaction and ensures a smooth
+                    experience.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Contact Admin Section */}
+      <section className="py-16 bg-slate-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-poppins font-bold text-gray-800 mb-8 text-center">
+            Contact
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Contact Admin 1 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 font-poppins">
+              <h3 className="text-base font-semibold text-gray-800">
+                Miftahul Jannah
+              </h3>
+              <p className="text-gray-600 mt-3">+62 822 8362 3928</p>
+              {/* You can add more contact information here */}
+            </div>
+
+            {/* Contact Admin 2 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 font-poppins">
+              <h3 className="text-base font-poppins font-semibold text-gray-800">
+                Adhitia Cahya Nugraha
+              </h3>
+              <p className="text-gray-600 mt-3">+62 898 8264 433</p>
+              {/* You can add more contact information here */}
+            </div>
+
+            {/* Contact Admin 3 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 font-poppins">
+              <h3 className="text-base font-semibold text-gray-800">
+                Ulam Muhammad Rapy
+              </h3>
+              <p className="text-gray-600 mt-3">+62 838 0252 1183</p>
+              {/* You can add more contact information here */}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"

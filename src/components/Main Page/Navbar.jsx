@@ -28,18 +28,18 @@ const Navbar = () => {
                   >
                     Profile
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/client/shop"
                     className="text-white-color font-poppins font-semibold mr-10"
                   >
                     Shop
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     to="/client/contact"
                     className="text-white-color font-poppins font-semibold mr-10"
                   >
                     Contact
-                  </Link>
+                  </Link> */}
                   <Link to="/client/login">Logout</Link>
                 </div>
               </div>
