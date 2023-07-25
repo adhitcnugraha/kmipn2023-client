@@ -30,19 +30,16 @@ const RegisterSeller = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-white">
-      <h1
-        className="opacity-75 text-green-primary font-bold text-6xl mb-10"
-        theme={theme}
-      >
+      <h1 className="opacity-75 text-green-primary font-poppins font-bold text-4xl mb-10 sm:text-2xl md:text-4xl lg:text-6xl">
         MarketDUS
       </h1>
-      <h1 className="text-black font-semibold text-4xl mb-10" theme={theme}>
+      <h1 className="text-black font-poppins font-semibold text-2xl mb-10 sm:text-lg md:text-2xl lg:text-4xl">
         Seller Register
       </h1>
-      <div className="flex flex-col items-center justify-center space-y-6">
+      <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-md px-6">
         {/* Username */}
         <FormControl
-          className="m-1 w-96 h-14 mt-8 font-poppins"
+          className="m-1 sm:w-24 md:w-64 lg:w-96 h-14 mt-8"
           variant="outlined"
         >
           <InputLabel
@@ -65,7 +62,10 @@ const RegisterSeller = () => {
           />
         </FormControl>
         {/* Email */}
-        <FormControl className="m-1 w-96 h-14" variant="outlined">
+        <FormControl
+          className="m-1 sm:w-24 md:w-64 lg:w-96 h-14"
+          variant="outlined"
+        >
           <InputLabel
             htmlFor="outlined-adornment-email"
             className="text-black opacity-70"
@@ -84,7 +84,10 @@ const RegisterSeller = () => {
           />
         </FormControl>
         {/* Password */}
-        <FormControl className="m-1 w-96 mb-10" variant="outlined">
+        <FormControl
+          className="m-1 sm:w-24 md:w-64 lg:w-96 mb-10"
+          variant="outlined"
+        >
           <InputLabel
             htmlFor="outlined-adornment-password"
             className="text-black opacity-70"
@@ -116,7 +119,7 @@ const RegisterSeller = () => {
             component={Link}
             to="/client/seller/login"
             variant="contained"
-            className=" text-white text-2xl rounded-3xl py-2 px-4 w-52 "
+            className=" font-poppins text-white text-2xl rounded-3xl py-2 px-4 w-52 sm:w-24 md:w-48 lg:w-72"
             style={{
               background: "#50A088",
               textTransform: "capitalize",
@@ -129,7 +132,7 @@ const RegisterSeller = () => {
           </Button>
           <Typography>
             <Button
-              className="mt-16 text-xl text-custom-blue font-poppins"
+              className="mt-16 text-xl text-custom-blue sm:text-base md:text-lg lg:text-xl font-bold font-poppins"
               component={Link}
               to="/client/seller/login"
               style={{

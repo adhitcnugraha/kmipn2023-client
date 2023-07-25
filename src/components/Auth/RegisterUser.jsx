@@ -29,20 +29,17 @@ const RegisterUser = () => {
     event.preventDefault();
   };
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-white">
-      <h1
-        className="opacity-75 text-green-primary font-bold text-6xl mb-10"
-        theme={theme}
-      >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+      <h1 className="opacity-75 text-green-primary font-poppins font-bold text-4xl mb-10 sm:text-2xl md:text-4xl lg:text-6xl">
         MarketDUS
       </h1>
-      <h1 className="text-black font-semibold text-4xl mb-10" theme={theme}>
+      <h1 className="text-black font-poppins font-semibold text-2xl mb-10 sm:text-lg md:text-2xl lg:text-4xl">
         Register
       </h1>
-      <div className="flex flex-col items-center justify-center space-y-6">
+      <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-md px-6">
         {/* Username */}
         <FormControl
-          className="m-1 w-96 h-14 mt-8 font-poppins"
+          className="m-1 sm:w-24 md:w-64 lg:w-96 h-14 mt-8"
           variant="outlined"
         >
           <InputLabel
@@ -52,8 +49,8 @@ const RegisterUser = () => {
             Username
           </InputLabel>
           <OutlinedInput
-            id="outlined-adornment-email"
-            label="Email"
+            id="outlined-adornment-username"
+            label="Username"
             style={{ borderRadius: 25 }}
             endAdornment={
               <InputAdornment
@@ -65,11 +62,13 @@ const RegisterUser = () => {
           />
         </FormControl>
         {/* Email */}
-        <FormControl className="m-1 w-96 h-14" variant="outlined">
+        <FormControl
+          className="m-1 sm:w-24 md:w-64 lg:w-96 h-14"
+          variant="outlined"
+        >
           <InputLabel
             htmlFor="outlined-adornment-email"
-            className="text-black opacity-70"
-            theme={theme}
+            className="font-poppins text-black opacity-70"
           >
             Email
           </InputLabel>
@@ -84,7 +83,10 @@ const RegisterUser = () => {
           />
         </FormControl>
         {/* Password */}
-        <FormControl className="m-1 w-96 mb-10" variant="outlined">
+        <FormControl
+          className="m-1 sm:w-24 md:w-64 lg:w-96 mb-10"
+          variant="outlined"
+        >
           <InputLabel
             htmlFor="outlined-adornment-password"
             className="text-black opacity-70"
@@ -116,7 +118,7 @@ const RegisterUser = () => {
             component={Link}
             to="/client/login"
             variant="contained"
-            className=" text-white text-2xl rounded-3xl py-2 px-4 w-52 "
+            className="font-poppins text-white text-2xl rounded-3xl py-2 px-4 w-52 sm:w-24 md:w-48 lg:w-72"
             style={{
               background: "#50A088",
               textTransform: "capitalize",
@@ -129,7 +131,7 @@ const RegisterUser = () => {
           </Button>
           <Typography>
             <Button
-              className="mt-16 text-xl text-custom-blue font-poppins"
+              className="mt-16 text-xl text-custom-blue sm:text-base md:text-lg lg:text-xl font-bold font-poppins"
               component={Link}
               to="/client/login"
               style={{
@@ -144,7 +146,7 @@ const RegisterUser = () => {
           </Typography>
           <Typography>
             <Button
-              className="font-bold text-xl opacity-80 underline"
+              className="font-bold sm:text-sm md:text-2xl lg:text-xl opacity-80 underline"
               style={{
                 color: "#E81616",
                 textTransform: "capitalize",
@@ -152,6 +154,7 @@ const RegisterUser = () => {
                 fontWeight: "bold",
                 fontSize: 18,
               }}
+              theme={theme}
               component={Link}
               to="/client/seller/register"
             >
