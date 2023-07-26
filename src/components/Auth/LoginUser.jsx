@@ -8,10 +8,12 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import "@fontsource/poppins";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { login } from "../../services/api";
+import { Link, useNavigate } from "react-router-dom";
 
 const theme = createTheme({
   typography: {
@@ -22,6 +24,30 @@ const theme = createTheme({
 
 const LoginUser = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [isAlertVisible, setAlertVisible] = useState(false);
+
+  const handleSubmit = async () => {
+    try {
+      const response = await login(email, password);
+      if (response && response.user_id === 0) {
+        alert("Login successful!");
+
+        setTimeout(() => {
+          navigate("/client/dashboard");
+        }, 3600);
+      } else {
+        setError("Invalid response from the server");
+      }
+    } catch (error) {
+      setError(error.message || "Email or password is incorrect");
+      console.log(error);
+    }
+  };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -56,6 +82,8 @@ const LoginUser = () => {
               <InputAdornment position="end" className="text-black" />
             }
             className="rounded-3xl text-black"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </FormControl>
         {/* Password */}
@@ -87,12 +115,13 @@ const LoginUser = () => {
               </InputAdornment>
             }
             className="rounded-3xl text-black"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </FormControl>
         <div className="flex flex-col items-center justify-center mt-6">
           <Button
-            component={Link}
-            to="/client/dashboard"
+            onClick={handleSubmit}
             variant="contained"
             className=" font-poppins text-white text-2xl rounded-3xl py-2 px-4 w-52 sm:w-24 md:w-48 lg:w-72"
             style={{
@@ -138,6 +167,81 @@ const LoginUser = () => {
           </Typography>
         </div>
       </div>
+      {/* Headless UI Transition for the alert */}
+      <Transition
+        show={isAlertVisible}
+        enter="transition-opacity duration-200"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-300"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        {/* Your alert UI */}
+        <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-4">
+          <p>Login successful!</p>
+        </div>
+      </Transition>
+      {/* Error Alert */}
+      <Transition show={error !== ""} as={Fragment}>
+        <Dialog
+          as="div"
+          className="fixed inset-0 z-10 overflow-y-auto"
+          onClose={() => setError("")}
+        >
+          <div className="min-h-screen px-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30" />
+            </Transition.Child>
+
+            <span
+              className="inline-block h-screen align-middle"
+              aria-hidden="true"
+            >
+              &#8203;
+            </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="inline-block max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <Dialog.Title
+                  as="h3"
+                  className="text-lg font-medium leading-6 text-gray-900"
+                >
+                  Incorrect
+                </Dialog.Title>
+                <div className="mt-2">
+                  <p className="text-sm text-red-600">{error}</p>
+                </div>
+
+                <div className="mt-4">
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus-visible:ring focus-visible:ring-red-500 focus-visible:ring-opacity-50"
+                    onClick={() => setError("")}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
     </div>
   );
 };

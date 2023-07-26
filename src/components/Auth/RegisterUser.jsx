@@ -11,6 +11,7 @@ import {
 import React, { useState } from "react";
 import "@fontsource/poppins";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { register } from "../../services/api";
 import { Link } from "react-router-dom";
 
 const theme = createTheme({
@@ -22,6 +23,21 @@ const theme = createTheme({
 
 const RegisterUser = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async () => {
+    try {
+      // Call the register function from api.js to register the user
+      const response = await register(email, password, fullName);
+      console.log(response); // Response from the server (e.g., user information or success message)
+      // Handle successful registration here, e.g., show a success message or redirect to a different page
+    } catch (error) {
+      console.error(error); // Handle registration error, e.g., show an error message to the user
+    }
+  };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -59,6 +75,8 @@ const RegisterUser = () => {
               />
             }
             className="rounded-3xl text-black"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
           />
         </FormControl>
         {/* Email */}
@@ -80,6 +98,8 @@ const RegisterUser = () => {
               <InputAdornment position="end" className="text-black" />
             }
             className="rounded-3xl text-black"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </FormControl>
         {/* Password */}
@@ -111,10 +131,13 @@ const RegisterUser = () => {
               </InputAdornment>
             }
             className="rounded-3xl text-black"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </FormControl>
         <div className="flex flex-col items-center justify-center mt-6">
           <Button
+            onClick={handleSubmit}
             component={Link}
             to="/client/login"
             variant="contained"
