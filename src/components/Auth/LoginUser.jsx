@@ -37,6 +37,7 @@ const LoginUser = () => {
         Login
       </h1>
       <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-md px-6">
+        <div></div>
         {/* Email */}
         <FormControl
           className="m-1 sm:w-24 md:w-64 lg:w-96 h-14 mt-8 "
