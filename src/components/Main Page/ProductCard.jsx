@@ -7,6 +7,11 @@ import Typography from "@mui/material/Typography";
 import exampleImage from "../../assets/contoh-1.jpeg";
 import gKunciImage from "../../assets/GKunci.jpg";
 import toteBagImage from "../../assets/Tote.jpg";
+import AnyamanVas from "../../assets/AnyamanVas.jpg";
+import HiasanLampu from "../../assets/HiasanLampu.jpg";
+import TasPopIce from "../../assets/TasPopIce.jpg";
+import TasPopIce2 from "../../assets/TasPopIce2.jpg";
+import Pupuk from "../../assets/Pupuk.jpg";
 import { Link } from "react-router-dom";
 import "@fontsource/poppins";
 import { Box } from "@mui/material";
@@ -21,7 +26,7 @@ const ProductCard = ({ to, image, title, price }) => {
           borderRadius: "15px",
           marginRight: 6,
         }}
-        className="w-full md:w-auto"
+        className="w-full md:w-auto justify-start"
       >
         <CardMedia
           component="img"
@@ -30,7 +35,7 @@ const ProductCard = ({ to, image, title, price }) => {
           image={image}
           className="overflow-hidden object-cover"
           style={{
-            maxHeight: "190px",
+            maxHeight: "160px",
             borderRadius: "15px 15px 0 0",
           }}
         />
@@ -41,7 +46,7 @@ const ProductCard = ({ to, image, title, price }) => {
             component="div"
             fontFamily="Poppins"
             fontWeight={500}
-            className="sm:text-left  md:text-left  lg:text-center  text-center"
+            className="sm:text-left  md:text-center  lg:text-center  text-center"
           >
             {title}
           </Typography>
@@ -51,7 +56,7 @@ const ProductCard = ({ to, image, title, price }) => {
             fontSize={"14px"}
             fontFamily="Poppins"
             fontWeight={500}
-            className="md:mr-4 md:ml-10 mt-2 md:mt-0"
+            className="md:mr-2 md:ml-2 mt-2 md:mt-0"
             sx={{
               margin: "2px 20px 0 10px",
             }}
@@ -60,7 +65,7 @@ const ProductCard = ({ to, image, title, price }) => {
           </Typography>
 
           {/* Keranjang */}
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -76,10 +81,10 @@ const ProductCard = ({ to, image, title, price }) => {
               strokeLinejoin="round"
               d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
             />
-          </svg>
+          </svg> */}
 
           {/* Bookmark */}
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -95,7 +100,7 @@ const ProductCard = ({ to, image, title, price }) => {
               strokeLinejoin="round"
               d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
             />
-          </svg>
+          </svg> */}
         </CardActions>
       </Card>
     </Link>
@@ -109,7 +114,7 @@ const ProductList = () => {
         padding: 20,
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-        gap: "5px",
+        gap: "20px",
       }}
     >
       <ProductCard
@@ -129,6 +134,36 @@ const ProductList = () => {
         image={gKunciImage}
         title="Gantungan Kunci"
         price="50,000"
+      />
+      <ProductCard
+        to="/client/product/4"
+        image={AnyamanVas}
+        title="Anyaman Vas"
+        price="150,000"
+      />
+      <ProductCard
+        to="/client/product/5"
+        image={HiasanLampu}
+        title="Hiasan Lampu"
+        price="30,000"
+      />
+      <ProductCard
+        to="/client/product/6"
+        image={TasPopIce}
+        title="Tas Pop Ice"
+        price="150,000"
+      />
+      <ProductCard
+        to="/client/product/7"
+        image={TasPopIce2}
+        title="Tas Pop Ice"
+        price="150,000"
+      />
+      <ProductCard
+        to="/client/product/8"
+        image={Pupuk}
+        title="Pupuk"
+        price="15,000"
       />
     </Box>
   );

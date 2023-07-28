@@ -48,15 +48,15 @@ const MainContentFour = () => {
           {/* Pre Order */}
           <div className="flex items-center gap-10">
             <h4 className="font-poppins font-medium mt-4">Pre Order</h4>
-            <Radio name="type" label="No" />
-            <Radio name="type" label="Yes" defaultChecked />
+            <Radio name="preOrder" label="No" />
+            <Radio name="preOrder" label="Yes" />
           </div>
 
           {/* Product Condition */}
           <div className="flex items-center gap-10 mt-3">
             <h4 className="font-poppins font-medium mt-4">Product Condition</h4>
-            <Radio name="type" label="Secondhand" />
-            <Radio name="type" label="New" defaultChecked />
+            <Radio name="condition" label="Secondhand" />
+            <Radio name="condition" label="New" />
           </div>
 
           {/* Product Code */}
