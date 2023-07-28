@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import exampleImage from "../../assets/contoh-1.jpeg";
+import HiasanLampu from "../../assets/HiasanLampu.jpg";
 import PaymentPage from "../Payment/PaymentPage";
 
-const ProductIdOne = () => {
+const ProductIdFive = () => {
   const [quantity, setQuantity] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
 
   const handleBuyNow = () => {
     setIsModalOpen(true);
   };
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
   };
 
   const handleDecrement = () => {
@@ -29,13 +29,13 @@ const ProductIdOne = () => {
       <Navbar />
       <div className="flex justify-start p-10">
         <img
-          src={exampleImage}
-          alt="example"
+          src={HiasanLampu}
+          alt="hiasan lampu"
           className="w-80 h-80 rounded-2xl border-4 border-gray-300 mr-10"
         />
         <div className="flex font-poppins flex-col">
-          <h2 className="text-4xl font-bold mb-4">Kotak Tisu</h2>
-          <p className="text-xl text-gray-600 mb-4">IDR 100,000</p>
+          <h2 className="text-4xl font-bold mb-4">Hiasan Lampu</h2>
+          <p className="text-xl text-gray-600 mb-4">IDR 30,000</p>
           <div className="text-gray-600 mb-4 mr-5 flex items-center">
             {/* Wrap buttons inside a div with flex and items-center class */}
             <span className="mr-3">Quantity</span>
@@ -77,11 +77,11 @@ const ProductIdOne = () => {
                     Payment Confirmation
                   </h2>
                   <p className="mb-4">
-                    Please confirm your purchase for the "Kotak Tisu" product
+                    Please confirm your purchase for the "Hiasan Lampu" product
                     with a quantity of {quantity}.
                   </p>
                   <PaymentPage
-                    totalAmount={quantity * 100000}
+                    totalAmount={quantity * 30000}
                     quantity={quantity}
                     handleCloseModal={handleCloseModal}
                   />
@@ -94,30 +94,17 @@ const ProductIdOne = () => {
           <div className="mt-8">
             <h3 className="text-2xl font-bold mb-4">Specifications:</h3>
             <ul className="list-disc pl-6">
-              <li>Material: Plastic</li>
-              <li>Color: Rainbow</li>
-              <li>Size: 10 x 10 x 5 cm</li>
+              <li>Material: Toothpicks</li>
+              <li>Color: White</li>
+              <li>Size: 12 x 4 x 2 inch</li>
             </ul>
 
             <h3 className="text-2xl font-bold mt-8 mb-4">Description:</h3>
             <p>
-              The "Kotak Tisu" tissue box is a perfect blend of functionality
-              and style. Keep tissues within easy reach in your living room,
-              bedroom, kitchen, or office with this convenient and modern
-              storage solution. The white color complements any decor, while the
-              compact size allows it to seamlessly fit into smaller spaces.
-            </p>
-            <p className="mt-4">
-              Refilling is a breeze - just lift the top cover, insert a new
-              tissue stack, and close it securely. The sturdy plastic
-              construction ensures that your tissues remain clean and protected
-              from dust and moisture.
-            </p>
-            <p className="mt-4">
-              Whether you need a tissue box for your home, office, or a
-              thoughtful gift for someone special, the "Kotak Tisu" is an ideal
-              choice. Elevate your space with this essential and elegant
-              accessory.
+              Our Toothpick Lamp Decoration is a mesmerizing and eco-friendly
+              centerpiece that radiates warmth and creativity. Crafted entirely
+              from biodegradable toothpicks, this unique lamp is a testament to
+              sustainable artistry and imaginative design. home accent.
             </p>
           </div>
         </div>
@@ -126,4 +113,4 @@ const ProductIdOne = () => {
   );
 };
 
-export default ProductIdOne;
+export default ProductIdFive;

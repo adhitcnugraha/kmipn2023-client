@@ -73,7 +73,7 @@ const MainContentFour = () => {
 
           {/* Button */}
           <div className="relative flex flex-col items-end justify-end h-52">
-            <Link to="/client/seller/addproduct/4">
+            <Link to="/client/seller/addproduct/5">
               <Button
                 variant="contained"
                 className="text-white text-xl rounded-3xl py-2 px-4 w-32 mt-6 font-poppins"

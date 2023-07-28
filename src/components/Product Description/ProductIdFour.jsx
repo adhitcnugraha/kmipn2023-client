@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import AnyamanVas from "../../assets/AnyamanVas.jpg";
+import PaymentPage from "../Payment/PaymentPage";
 
-const ProductIdOne = () => {
+const ProductIdFour = () => {
   const [quantity, setQuantity] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBuyNow = () => {
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
@@ -54,9 +63,31 @@ const ProductIdOne = () => {
             <button className="bg-yellow-500 text-white py-2 px-4 mr-2 rounded-md hover:bg-red-600 focus:outline-none">
               Favorite
             </button>
-            <button className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none">
+            <button
+              onClick={handleBuyNow}
+              className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none"
+            >
               Buy Now
             </button>
+            {/* Modal */}
+            {isModalOpen && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="bg-white p-8 rounded-lg">
+                  <h2 className="text-3xl font-bold mb-5 text-center">
+                    Payment Confirmation
+                  </h2>
+                  <p className="mb-4">
+                    Please confirm your purchase for the "Anyaman Vas" product
+                    with a quantity of {quantity}.
+                  </p>
+                  <PaymentPage
+                    totalAmount={quantity * 150000}
+                    quantity={quantity}
+                    handleCloseModal={handleCloseModal}
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Section for Specifications and Description */}
@@ -83,4 +114,4 @@ const ProductIdOne = () => {
   );
 };
 
-export default ProductIdOne;
+export default ProductIdFour;

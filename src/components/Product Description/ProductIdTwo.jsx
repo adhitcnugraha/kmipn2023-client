@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import PaymentPage from "../Payment/PaymentPage";
 import ToteBag from "../../assets/Tote.jpg";
 
 const ProductIdOne = () => {
@@ -79,23 +80,11 @@ const ProductIdOne = () => {
                     Please confirm your purchase for the "Totebag" product with
                     a quantity of {quantity}.
                   </p>
-                  <p className="mb-4">Total Amount: IDR {quantity * 90000}</p>
-
-                  {/* Buttons for Confirming and Closing the Modal */}
-                  <div className="flex justify-end">
-                    <button
-                      onClick={handleCloseModal}
-                      className="bg-red-500 text-white py-2 px-4 rounded-md mr-2 hover:bg-red-600 focus:outline-none"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none"
-                      // Implement your logic for payment processing here (e.g., redirect to payment gateway)
-                    >
-                      Confirm Payment
-                    </button>
-                  </div>
+                  <PaymentPage
+                    totalAmount={quantity * 90000}
+                    quantity={quantity}
+                    handleCloseModal={handleCloseModal}
+                  />
                 </div>
               </div>
             )}

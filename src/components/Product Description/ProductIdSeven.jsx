@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import exampleImage from "../../assets/contoh-1.jpeg";
+import TasPopIce2 from "../../assets/TasPopIce2.jpg";
 import PaymentPage from "../Payment/PaymentPage";
 
-const ProductIdOne = () => {
+const ProductIdSix = () => {
   const [quantity, setQuantity] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
 
   const handleBuyNow = () => {
     setIsModalOpen(true);
   };
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
   };
 
   const handleDecrement = () => {
@@ -29,13 +29,13 @@ const ProductIdOne = () => {
       <Navbar />
       <div className="flex justify-start p-10">
         <img
-          src={exampleImage}
-          alt="example"
+          src={TasPopIce2}
+          alt="tas pop ice 2"
           className="w-80 h-80 rounded-2xl border-4 border-gray-300 mr-10"
         />
         <div className="flex font-poppins flex-col">
-          <h2 className="text-4xl font-bold mb-4">Kotak Tisu</h2>
-          <p className="text-xl text-gray-600 mb-4">IDR 100,000</p>
+          <h2 className="text-4xl font-bold mb-4">Tas Pop Ice</h2>
+          <p className="text-xl text-gray-600 mb-4">IDR 150,000</p>
           <div className="text-gray-600 mb-4 mr-5 flex items-center">
             {/* Wrap buttons inside a div with flex and items-center class */}
             <span className="mr-3">Quantity</span>
@@ -77,11 +77,11 @@ const ProductIdOne = () => {
                     Payment Confirmation
                   </h2>
                   <p className="mb-4">
-                    Please confirm your purchase for the "Kotak Tisu" product
+                    Please confirm your purchase for the "Tas Pop Ice" product
                     with a quantity of {quantity}.
                   </p>
                   <PaymentPage
-                    totalAmount={quantity * 100000}
+                    totalAmount={quantity * 150000}
                     quantity={quantity}
                     handleCloseModal={handleCloseModal}
                   />
@@ -95,29 +95,17 @@ const ProductIdOne = () => {
             <h3 className="text-2xl font-bold mb-4">Specifications:</h3>
             <ul className="list-disc pl-6">
               <li>Material: Plastic</li>
-              <li>Color: Rainbow</li>
-              <li>Size: 10 x 10 x 5 cm</li>
+              <li>Color: Green</li>
+              <li>Size: 15 x 12 x 5 inch</li>
             </ul>
 
             <h3 className="text-2xl font-bold mt-8 mb-4">Description:</h3>
             <p>
-              The "Kotak Tisu" tissue box is a perfect blend of functionality
-              and style. Keep tissues within easy reach in your living room,
-              bedroom, kitchen, or office with this convenient and modern
-              storage solution. The white color complements any decor, while the
-              compact size allows it to seamlessly fit into smaller spaces.
-            </p>
-            <p className="mt-4">
-              Refilling is a breeze - just lift the top cover, insert a new
-              tissue stack, and close it securely. The sturdy plastic
-              construction ensures that your tissues remain clean and protected
-              from dust and moisture.
-            </p>
-            <p className="mt-4">
-              Whether you need a tissue box for your home, office, or a
-              thoughtful gift for someone special, the "Kotak Tisu" is an ideal
-              choice. Elevate your space with this essential and elegant
-              accessory.
+              Our Pop Ice Branded Plastic Tote Bag is a stylish and eco-friendly
+              accessory designed to suit your everyday needs. Crafted from
+              high-quality recycled plastic from Pop Ice containers, this tote
+              bag not only offers practicality but also contributes to reducing
+              plastic waste, making it a sustainable and fashionable choice.
             </p>
           </div>
         </div>
@@ -126,4 +114,4 @@ const ProductIdOne = () => {
   );
 };
 
-export default ProductIdOne;
+export default ProductIdSix;

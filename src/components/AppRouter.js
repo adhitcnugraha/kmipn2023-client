@@ -16,11 +16,27 @@ import MainContent from "./Form/Product Forms/MainContent";
 import MainContentTwo from "./Form/Product Forms/MainContentTwo";
 import MainContentThree from "./Form/Product Forms/MainContentThree";
 import MainContentFour from "./Form/Product Forms/MainContentFour";
+import ContentResponse from "./Form/Product Forms/ContentResponse";
 // Product Description
 import ProductIdOne from "./Product Description/ProductIdOne";
 import ProductIdTwo from "./Product Description/ProductIdTwo";
 import ProductIdThree from "./Product Description/ProductIdThree";
 import ProductIdFour from "./Product Description/ProductIdFour";
+import ProductIdFive from "./Product Description/ProductIdFive";
+import ProductIdSix from "./Product Description/ProductIdSix";
+import ProductIdSeven from "./Product Description/ProductIdSeven";
+import ProductIdEight from "./Product Description/ProductIdEight";
+
+const products = [
+  { id: 1, component: <ProductIdOne /> },
+  { id: 2, component: <ProductIdTwo /> },
+  { id: 3, component: <ProductIdThree /> },
+  { id: 4, component: <ProductIdFour /> },
+  { id: 5, component: <ProductIdFive /> },
+  { id: 6, component: <ProductIdSix /> },
+  { id: 7, component: <ProductIdSeven /> },
+  { id: 8, component: <ProductIdEight /> },
+];
 
 const AppRouter = () => {
   return (
@@ -31,27 +47,19 @@ const AppRouter = () => {
         <Route path="/client/login" element={<LoginUser />} />
         <Route path="/client/register" element={<RegisterUser />} />
         <Route path="/client/seller/*" element={<SellerRoutes />} />
-        {/* <Route
-          path="/client/product/:productId"
-          element={<ProductDescriptionsRoutes />}
-        /> */}
-        <Route path="/client/product/1" element={<ProductIdOne />} />
-        <Route path="/client/product/2" element={<ProductIdTwo />} />
-        <Route path="/client/product/3" element={<ProductIdThree />} />
-        <Route path="/client/product/4" element={<ProductIdFour />} />
+
+        {/* Product Description Route */}
+        {products.map((product) => (
+          <Route
+            key={product.id}
+            path={`/client/product/${product.id}`}
+            element={product.component}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );
 };
-
-// const ProductDescriptionsRoutes = () => {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<ProductIdOne />} />
-//       <Route path="/2" element={<ProductIdTwo />} />
-//     </Routes>
-//   );
-// };
 
 const SellerRoutes = () => {
   return (
@@ -73,6 +81,7 @@ const AddProductRoutes = () => {
       <Route path="/2" element={<MainContentTwo />} />
       <Route path="/3" element={<MainContentThree />} />
       <Route path="/4" element={<MainContentFour />} />
+      <Route path="/5" element={<ContentResponse />} />
     </Routes>
   );
 };
