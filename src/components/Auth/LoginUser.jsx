@@ -8,11 +8,12 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import React, { useState } from "react";
-// import { Dialog, Transition } from "@headlessui/react";
+import React, { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { useNavigate } from "react-router-dom";
 import "@fontsource/poppins";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-// import { login } from "../../services/api";
+import { login } from "../../services/api";
 import { Link } from "react-router-dom";
 
 const theme = createTheme({
@@ -27,27 +28,27 @@ const LoginUser = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const navigate = useNavigate();
-  // const [error, setError] = useState("");
-  // const [isAlertVisible, setAlertVisible] = useState(false);
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [isAlertVisible, setAlertVisible] = useState(false);
 
-  // const handleSubmit = async () => {
-  //   try {
-  //     const response = await login(email, password);
-  //     if (response && response.user_id === 0) {
-  //       alert("Login successful!");
+  const handleSubmit = async () => {
+    try {
+      const response = await login(email, password);
+      if (response && response.user_id === 0) {
+        alert("Login successful!");
 
-  //       setTimeout(() => {
-  //         navigate("/client/dashboard");
-  //       }, 3600);
-  //     } else {
-  //       setError("Invalid response from the server");
-  //     }
-  //   } catch (error) {
-  //     setError(error.message || "Email or password is incorrect");
-  //     console.log(error);
-  //   }
-  // };
+        setTimeout(() => {
+          navigate("/client/dashboard");
+        }, 3600);
+      } else {
+        setError("Invalid response from the server");
+      }
+    } catch (error) {
+      setError(error.message || "Email or password is incorrect");
+      console.log(error);
+    }
+  };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -121,9 +122,9 @@ const LoginUser = () => {
         </FormControl>
         <div className="flex flex-col items-center justify-center mt-6">
           <Button
-            // onClick={handleSubmit}
-            component={Link}
-            to="/client/dashboard"
+            onClick={handleSubmit}
+            // component={Link}
+            // to="/client/dashboard"
             variant="contained"
             className=" font-poppins text-white text-2xl rounded-3xl py-2 px-4 w-52 sm:w-24 md:w-48 lg:w-72"
             style={{
@@ -170,7 +171,7 @@ const LoginUser = () => {
         </div>
       </div>
       {/* Headless UI Transition for the alert */}
-      {/* <Transition
+      <Transition
         show={isAlertVisible}
         enter="transition-opacity duration-200"
         enterFrom="opacity-0"
@@ -178,14 +179,13 @@ const LoginUser = () => {
         leave="transition-opacity duration-300"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-      > */}
-
-      {/* <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-4">
+      >
+        <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-4">
           <p>Login successful!</p>
         </div>
-      </Transition> */}
+      </Transition>
       {/* Error Alert */}
-      {/* <Transition show={error !== ""} as={Fragment}>
+      <Transition show={error !== ""} as={Fragment}>
         <Dialog
           as="div"
           className="fixed inset-0 z-10 overflow-y-auto"
@@ -241,9 +241,9 @@ const LoginUser = () => {
                 </div>
               </div>
             </Transition.Child>
-            </div>
-            </Dialog>
-          </Transition> */}
+          </div>
+        </Dialog>
+      </Transition>
     </div>
   );
 };
