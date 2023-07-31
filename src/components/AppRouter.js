@@ -26,6 +26,9 @@ import ProductIdFive from "./Product Description/ProductIdFive";
 import ProductIdSix from "./Product Description/ProductIdSix";
 import ProductIdSeven from "./Product Description/ProductIdSeven";
 import ProductIdEight from "./Product Description/ProductIdEight";
+// Payment Page
+import PaymentPage from "./Payment/PaymentPage";
+import PaymentInfo from "./Payment/PaymentInfo";
 
 const products = [
   { id: 1, component: <ProductIdOne /> },
@@ -38,7 +41,7 @@ const products = [
   { id: 8, component: <ProductIdEight /> },
 ];
 
-const AppRouter = () => {
+const AppRouter = ({ totalAmount, quantity }) => {
   return (
     <BrowserRouter>
       <Routes>
@@ -56,6 +59,10 @@ const AppRouter = () => {
             element={product.component}
           />
         ))}
+        <Route
+          path="/client/payment-confirmation/*"
+          element={<PaymentInfo />}
+        />
       </Routes>
     </BrowserRouter>
   );
@@ -70,6 +77,7 @@ const SellerRoutes = () => {
       <Route path="/form/2" element={<SellerFormStepTwo />} />
       <Route path="/form/3" element={<SellerFormStepThree />} />
       <Route path="/addproduct/*" element={<AddProductRoutes />} />
+      <Route path="/payment" element={<PaymentPage />} />
     </Routes>
   );
 };

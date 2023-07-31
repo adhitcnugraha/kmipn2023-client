@@ -14,6 +14,7 @@ const ProductIdOne = () => {
   const handleBuyNow = () => {
     setIsModalOpen(true);
   };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
@@ -69,17 +70,14 @@ const ProductIdOne = () => {
             >
               Buy Now
             </button>
-            {/* Modal */}
+          </div>
+
+          <div className="mt-8">
+            {/* Add the modal */}
             {isModalOpen && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                 <div className="bg-white p-8 rounded-lg">
-                  <h2 className="text-3xl font-bold mb-5 text-center">
-                    Payment Confirmation
-                  </h2>
-                  <p className="mb-4">
-                    Please confirm your purchase for the "Kotak Tisu" product
-                    with a quantity of {quantity}.
-                  </p>
+                  {/* Pass the required props to the PaymentPage component */}
                   <PaymentPage
                     totalAmount={quantity * 100000}
                     quantity={quantity}
