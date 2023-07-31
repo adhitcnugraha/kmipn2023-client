@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import Pupuk from "../../assets/Pupuk.jpg";
+import TasTutupBotol from "../../assets/TasTutupBotol.jpg";
 import PaymentPage from "../Payment/PaymentPage";
 
-const ProductIdEight = () => {
+const ProductIdNine = () => {
   const [quantity, setQuantity] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,8 +29,8 @@ const ProductIdEight = () => {
       <Navbar />
       <div className="flex justify-start p-10">
         <img
-          src={Pupuk}
-          alt="pupuk"
+          src={TasTutupBotol}
+          alt="TasTutupBotol"
           className="w-80 h-80 rounded-2xl border-4 border-gray-300 mr-10"
         />
         <div className="flex font-poppins flex-col">
@@ -114,4 +114,4 @@ const ProductIdEight = () => {
   );
 };
 
-export default ProductIdEight;
+export default ProductIdNine;

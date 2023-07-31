@@ -26,6 +26,7 @@ import ProductIdFive from "./Product Description/ProductIdFive";
 import ProductIdSix from "./Product Description/ProductIdSix";
 import ProductIdSeven from "./Product Description/ProductIdSeven";
 import ProductIdEight from "./Product Description/ProductIdEight";
+import ProductIdNine from "./Product Description/ProductIdNine";
 // Payment Page
 import PaymentPage from "./Payment/PaymentPage";
 import PaymentInfo from "./Payment/PaymentInfo";
@@ -39,6 +40,7 @@ const products = [
   { id: 6, component: <ProductIdSix /> },
   { id: 7, component: <ProductIdSeven /> },
   { id: 8, component: <ProductIdEight /> },
+  { id: 9, component: <ProductIdNine /> },
 ];
 
 const AppRouter = ({ totalAmount, quantity }) => {

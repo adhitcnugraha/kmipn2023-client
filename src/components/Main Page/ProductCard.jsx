@@ -12,6 +12,7 @@ import HiasanLampu from "../../assets/HiasanLampu.jpg";
 import TasPopIce from "../../assets/TasPopIce.jpg";
 import TasPopIce2 from "../../assets/TasPopIce2.jpg";
 import Pupuk from "../../assets/Pupuk.jpg";
+import TasTutupBotol from "../../assets/TasTutupBotol.jpg";
 import { Link } from "react-router-dom";
 import "@fontsource/poppins";
 import { Box } from "@mui/material";
@@ -164,6 +165,12 @@ const ProductList = () => {
         image={Pupuk}
         title="Pupuk"
         price="15,000"
+      />
+      <ProductCard
+        to="/client/product/9"
+        image={TasTutupBotol}
+        title="Tas Tutup Botol"
+        price="200,000"
       />
     </Box>
   );
