@@ -77,7 +77,7 @@ const ProductIdNine = () => {
                     Payment Confirmation
                   </h2>
                   <PaymentPage
-                    totalAmount={quantity * 15000}
+                    totalAmount={quantity * 250000}
                     quantity={quantity}
                     handleCloseModal={handleCloseModal}
                   />
