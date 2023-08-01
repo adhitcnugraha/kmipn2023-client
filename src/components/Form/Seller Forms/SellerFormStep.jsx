@@ -23,19 +23,16 @@ const SellerFormStep = () => {
       <NavbarSellerForm />
       {/* Steps */}
       <div className="flex flex-col items-center justify-center mt-10">
-        <ul
-          className="flex justify-between border-b-2 pb-3 font-poppins font-semibold"
-          style={{ width: "50%", marginBottom: 10 }}
-        >
+        <ul className="flex justify-between border-b-2 pb-3 font-poppins font-semibold w-11/12 md:w-1/2">
           <li className="mr-4">Information</li>
           <li className="mr-4 opacity-40">Delivery Service</li>
           <li className="mr-4 opacity-40">Send</li>
         </ul>
 
-        <div className="flex flex-col items-center justify-center space-y-6 mt-10">
+        <div className="flex flex-col items-center justify-center space-y-6 mt-10 w-11/12 md:w-1/2">
           {/* Shopname */}
           <FormControl
-            className="m-1 w-96 h-10 mt-8 font-poppins"
+            className="m-1 w-full h-10 mt-8 font-poppins"
             variant="outlined"
             style={{ marginBottom: 20 }}
           >
@@ -61,7 +58,7 @@ const SellerFormStep = () => {
 
           {/* Address */}
           <FormControl
-            className="m-1 w-96 h-10 mt-8 font-poppins"
+            className="m-1 w-full h-10 mt-8 font-poppins"
             variant="outlined"
             style={{ marginBottom: 20 }}
           >
@@ -87,7 +84,7 @@ const SellerFormStep = () => {
 
           {/* Phone Number */}
           <FormControl
-            className="m-1 w-96 h-10 mt-8 font-poppins"
+            className="m-1 w-full h-10 mt-8 font-poppins"
             variant="outlined"
             style={{ marginBottom: 20 }}
           >

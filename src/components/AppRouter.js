@@ -27,9 +27,15 @@ import ProductIdSix from "./Product Description/ProductIdSix";
 import ProductIdSeven from "./Product Description/ProductIdSeven";
 import ProductIdEight from "./Product Description/ProductIdEight";
 import ProductIdNine from "./Product Description/ProductIdNine";
+import ProductIdTen from "./Product Description/ProductIdTen";
 // Payment Page
 import PaymentPage from "./Payment/PaymentPage";
 import PaymentInfo from "./Payment/PaymentInfo";
+// Profile
+import Profile from "./Profile/Profile";
+import Response from "./Profile/Response";
+import ProductIdEleven from "./Product Description/ProductIdEleven";
+import ProductIdTwelve from "./Product Description/ProductIdTwelve";
 
 const products = [
   { id: 1, component: <ProductIdOne /> },
@@ -41,6 +47,10 @@ const products = [
   { id: 7, component: <ProductIdSeven /> },
   { id: 8, component: <ProductIdEight /> },
   { id: 9, component: <ProductIdNine /> },
+  { id: 10, component: <ProductIdTen /> },
+  { id: 11, component: <ProductIdEleven /> },
+  { id: 12, component: <ProductIdTwelve /> },
+  //
 ];
 
 const AppRouter = ({ totalAmount, quantity }) => {
@@ -52,6 +62,8 @@ const AppRouter = ({ totalAmount, quantity }) => {
         <Route path="/client/login" element={<LoginUser />} />
         <Route path="/client/register" element={<RegisterUser />} />
         <Route path="/client/seller/*" element={<SellerRoutes />} />
+        <Route path="/client/profile" element={<Profile />} />
+        <Route path="/client/profile/response" element={<Response />} />
 
         {/* Product Description Route */}
         {products.map((product) => (

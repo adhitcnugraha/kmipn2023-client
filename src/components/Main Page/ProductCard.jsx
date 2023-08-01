@@ -13,6 +13,9 @@ import TasPopIce from "../../assets/TasPopIce.jpg";
 import TasPopIce2 from "../../assets/TasPopIce2.jpg";
 import Pupuk from "../../assets/Pupuk.jpg";
 import TasTutupBotol from "../../assets/TasTutupBotol.jpg";
+import HiasanDinding from "../../assets/HiasanDinding.jpg";
+import LampuHias from "../../assets/LampuHias.jpg";
+import TasPlastikDaurUlang from "../../assets/TasPlastikDaurUlang.jpg";
 import { Link } from "react-router-dom";
 import "@fontsource/poppins";
 import { Box } from "@mui/material";
@@ -170,6 +173,24 @@ const ProductList = () => {
         to="/client/product/9"
         image={TasTutupBotol}
         title="Tas Tutup Botol"
+        price="200,000"
+      />
+      <ProductCard
+        to="/client/product/10"
+        image={HiasanDinding}
+        title="Hiasan Dinding"
+        price="30,000"
+      />
+      <ProductCard
+        to="/client/product/11"
+        image={LampuHias}
+        title="Lampu Hiasan"
+        price="50,000"
+      />{" "}
+      <ProductCard
+        to="/client/product/12"
+        image={TasPlastikDaurUlang}
+        title="Tas Plastik Daur Ulang"
         price="200,000"
       />
     </Box>

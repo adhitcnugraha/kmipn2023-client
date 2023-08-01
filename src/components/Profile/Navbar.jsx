@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logolandingpage.PNG";
+import { Typography, createTheme } from "@mui/material";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Poppins",
+    fontSize: 16,
+  },
+});
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,27 +37,24 @@ const Navbar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <div className="text-white-color font-poppins font-semibold mr-10">
                   <Link
-                    to="/client/profile"
+                    to="/client/dashboard"
                     className="text-white-color font-poppins font-semibold mr-10"
                   >
-                    Profile
+                    Dashboard
                   </Link>
-                  {/* <Link
-                  to="/client/shop"
-                  className="text-white-color font-poppins font-semibold mr-10"
-                >
-                  Shop
-                </Link> */}
-                  {/* <Link
-                  to="/client/contact"
-                  className="text-white-color font-poppins font-semibold mr-10"
-                >
-                  Contact
-                </Link> */}
                   <Link to="/client/login">Logout</Link>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="hidden md:block">
+            <Typography
+              theme={theme}
+              style={{ color: "white", fontWeight: 600 }}
+              className="text-white font-semibold text-sm md:text-xl mr-4 md:mr-15"
+            >
+              Profile
+            </Typography>
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -75,17 +80,6 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          {/* Search Input */}
-          {/* <div className="hidden md:flex items-center md:ml-6">
-            <input
-              className="bg-gray-300 text-black-opacity-60 px-2 py-1 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500  mr-2"
-              type="text"
-              placeholder="Search ..."
-            />
-            <button type="submit" className="hidden">
-              Submit
-            </button>
-          </div> */}
         </div>
         {/* Mobile Menu */}
         <div className="md:hidden">

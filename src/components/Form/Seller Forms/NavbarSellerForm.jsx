@@ -14,10 +14,11 @@ const NavbarSellerForm = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 font-poppins">
               <Typography
                 theme={theme}
                 style={{ color: "white", fontWeight: 600 }}
+                className="text-white text-sm md:text-xl"
               >
                 MarketDUS
               </Typography>
@@ -26,7 +27,8 @@ const NavbarSellerForm = () => {
           <div className="hidden md:block">
             <Typography
               theme={theme}
-              style={{ color: "white", fontWeight: 600, marginRight: 15 }}
+              style={{ color: "white", fontWeight: 600 }}
+              className="text-white font-semibold text-sm md:text-xl mr-4 md:mr-15"
             >
               Seller Form
             </Typography>

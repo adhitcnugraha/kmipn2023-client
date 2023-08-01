@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import TasTutupBotol from "../../assets/TasTutupBotol.jpg";
+import LampuHias from "../../assets/LampuHias.jpg";
 import PaymentPage from "../Payment/PaymentPage";
 
-const ProductIdNine = () => {
+const ProductIdEleven = () => {
   const [quantity, setQuantity] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,13 +29,13 @@ const ProductIdNine = () => {
       <Navbar />
       <div className="flex justify-start p-10">
         <img
-          src={TasTutupBotol}
-          alt="TasTutupBotol"
+          src={LampuHias}
+          alt="LampuHias"
           className="w-80 h-80 rounded-2xl border-4 border-gray-300 mr-10"
         />
         <div className="flex font-poppins flex-col">
-          <h2 className="text-4xl font-bold mb-4">Tas Tutup Botol</h2>
-          <p className="text-xl text-gray-600 mb-4">IDR 200,000</p>
+          <h2 className="text-4xl font-bold mb-4">Lampu Hias</h2>
+          <p className="text-xl text-gray-600 mb-4">IDR 50,000</p>
           <div className="text-gray-600 mb-4 mr-5 flex items-center">
             {/* Wrap buttons inside a div with flex and items-center class */}
             <span className="mr-3">Quantity</span>
@@ -77,7 +77,7 @@ const ProductIdNine = () => {
                     Payment Confirmation
                   </h2>
                   <PaymentPage
-                    totalAmount={quantity * 200000}
+                    totalAmount={quantity * 50000}
                     quantity={quantity}
                     handleCloseModal={handleCloseModal}
                   />
@@ -90,18 +90,17 @@ const ProductIdNine = () => {
           <div className="mt-8">
             <h3 className="text-2xl font-bold mb-4">Specifications:</h3>
             <ul className="list-disc pl-6">
-              <li>Material: Steel</li>
-              <li>Color: Green, Red, Silver</li>
-              <li>Size: 12 x 8 x 4 inches</li>
+              <li>Material: Wood</li>
+              <li>Color: White</li>
+              <li>Size: 8 x 12 inch</li>
             </ul>
 
             <h3 className="text-2xl font-bold mt-8 mb-4">Description:</h3>
             <p>
-              The CapSaver Bottle Cap Bag is a stylish and eco-friendly solution
-              for collecting and storing bottle caps. Crafted with premium,
-              durable materials, this bag offers a convenient and sustainable
-              way to manage bottle caps, reducing environmental impact and
-              clutter in your home or workspace.
+              This stunning pendant light is handcrafted from repurposed glass
+              bottles, giving a unique touch to any space. The glass bottles are
+              cut and polished to create a smooth surface, allowing the light to
+              softly diffuse and create a warm ambiance.
             </p>
           </div>
         </div>
@@ -110,4 +109,4 @@ const ProductIdNine = () => {
   );
 };
 
-export default ProductIdNine;
+export default ProductIdEleven;
