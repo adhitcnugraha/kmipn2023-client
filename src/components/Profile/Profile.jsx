@@ -10,10 +10,10 @@ import {
 import { Button } from "@material-tailwind/react";
 
 const Profile = () => {
-  const [username, setUsername] = useState("adhitcnugraha");
-  const [email, setEmail] = useState("adhitcnugraha@gmail.com");
-  const [phoneNumber, setPhoneNumber] = useState("082171626382");
-  const [name, setName] = useState("Adhit");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [name, setName] = useState("");
 
   return (
     <>
