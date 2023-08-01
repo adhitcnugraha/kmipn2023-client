@@ -89,10 +89,10 @@ const Navbar = () => {
             }`}
           >
             <Link
-              to="/client/profile"
+              to="/client/dashboard"
               className="text-white-color block px-3 py-2 rounded-md font-poppins font-semibold"
             >
-              Profile
+              Dashboard
             </Link>
             {/* <Link
             to="/client/shop"
